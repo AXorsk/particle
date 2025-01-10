@@ -134,9 +134,13 @@ function loadScene() {
 	//gl.drawArrays( gl.LINES, 0, numLines );
 	//gl.flush();
 
+	window.addEventListener("click", function() {
+		rotate();
+	})
+
 	//setInterval( drawScene, 1000 / 40 );
 	animate();
-	setTimeout(timer, 1500);
+	rotate();
 }
 var count = 0;
 var cn = 0;
@@ -369,10 +373,7 @@ function draw2() {
 	}
 }
 
-
-
-function timer() {
+function rotate() {
 	drawType = (drawType + 1) % 3;
 
-	setTimeout(timer, 1500);
 }
